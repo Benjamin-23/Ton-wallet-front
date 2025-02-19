@@ -1,0 +1,75 @@
+module.exports = {
+	root: true,
+	env: { browser: true, es2020: true, node: true },
+	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended'],
+	ignorePatterns: ['dist', '.eslintrc.cjs'],
+	parser: '@typescript-eslint/parser',
+	plugins: ['react-refresh'],
+	rules: {
+		'@typescript-eslint/no-unused-vars': [
+			'warn',
+			{
+				argsIgnorePattern: '^_',
+			},
+		],
+		'@typescript-eslint/no-explicit-any': 'off',
+		'no-unused-vars': 'off',
+		indent: ['error', 'tab'],
+		'linebreak-style': ['error', 'unix'],
+		quotes: ['warn', 'single'],
+		semi: ['error', 'always'],
+		'no-multi-spaces': 'error',
+		'array-bracket-spacing': ['warn', 'always', { singleValue: false }],
+		'block-spacing': 'error',
+		'space-before-blocks': 'error',
+		'space-before-function-paren': 'error',
+		'space-in-parens': ['error', 'never'],
+		'space-infix-ops': ['error', { int32Hint: false }],
+		'space-unary-ops': [
+			2,
+			{
+				words: true,
+				nonwords: false,
+				overrides: {
+					'++': false,
+				},
+			},
+		],
+		'key-spacing': [
+			'error',
+			{
+				beforeColon: false,
+				afterColon: true,
+			},
+		],
+		'keyword-spacing': [
+			'error',
+			{
+				before: true,
+				after: true,
+			},
+		],
+		'no-multiple-empty-lines': [
+			'error',
+			{
+				max: 2,
+				maxEOF: 1,
+			},
+		],
+		'no-mixed-spaces-and-tabs': 'warn',
+		'no-useless-escape': 'off',
+		'no-redeclare': 'warn',
+		'no-empty': 'warn',
+		'no-undef': 'error',
+		'no-constant-condition': 'warn',
+		'no-async-promise-executor': 'warn',
+		'no-prototype-builtins': 'warn',
+		'no-irregular-whitespace': 'warn',
+		'no-ex-assign': 'warn',
+		'no-unreachable': 'warn',
+		'no-inner-declarations': 'warn',
+		'no-useless-catch': 'warn',
+		'brace-style': 'warn',
+		'object-curly-spacing': ['warn', 'always'],
+	},
+};
