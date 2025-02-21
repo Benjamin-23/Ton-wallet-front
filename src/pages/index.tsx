@@ -124,6 +124,25 @@ export const Home: FunctionComponent = () => {
             </div>
           </div>
         </ButtonCard>
+        <ButtonCard
+          className="cursor-pointer"
+          onClick={() => navigate("/Nft")}
+          margin="0"
+        >
+          <div className="flex justify-start items-center">
+            <div className="mr-1 cursor-pointer icon">
+              <HiCreditCard fill="#fff" size={36} />
+            </div>
+            <div>
+              <p className="title">{t("home.menu.Lending.title")}</p>
+              <p className="subtitle">{t("home.menu.Lending.subtitle")}</p>
+            </div>
+            <div style={{ marginLeft: "auto" }}>
+              <HiChevronRight size={16} />
+            </div>
+          </div>
+        </ButtonCard>
+        s
       </ContanerButton>
       <Tabbar />
     </Page>
